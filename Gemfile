@@ -2,14 +2,22 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 #Adding Heroku here to use the specified version of ruby
-ruby '2.3.3'
+ruby '2.5.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', group: [:development, :test]
+group :development, :test do
+gem 'sqlite3'
+end
 #Use Postgress as  thhe production database
-gem 'pg', group: :production
+
+group: :production
+gem 'pg', '~>0.18' 
+end
+
+#add bootstrap
+gem 'bootstrap-sass'
 
 #The 12 factors for Heroku
 gem 'rails_12factor', group: :production
