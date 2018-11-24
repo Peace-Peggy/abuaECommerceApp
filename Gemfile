@@ -11,10 +11,13 @@ group :development, :test do
   gem 'sqlite3'
 end
 #Use Postgress as  thhe production database
-
 group :production do
   gem 'pg', '~>0.18' 
 end
+
+#Using strip as payment processor
+gem 'stripe' ,:git => 'https://github.com/stripe/stripe-ruby'
+#,:git => 'https://github.com/stripe/stripe-ruby'
 
 #add bootstrap
 gem 'bootstrap-sass'
