@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
      <title>ECommerce</title>
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,800' >
-   
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -15,15 +10,11 @@
   </head>
 
   <body>
-  <div id="content" class="container">
-    <header id="content-header">
-        <div id="price-container">
-          <span class="glyphicon glyphicon-tag"></span><span class="price">$9.99</span>
-        </div>
-        <%= image_tag('hair.jpeg', id:'header_image', alt:'app_image') %>
-        <img id="content-header-img" src="img/header-image.jpg" alt="Learn Growth Hacking">
-    </header>
-    <%= yield %>
-    </div>
+  <header>
+   <%=render partial: 'shared/navigation'%>
+  </header>
+  <%= yield %>
   </body>
 </html>
+
+  

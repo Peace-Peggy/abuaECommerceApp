@@ -1,8 +1,8 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 #Adding Heroku here to use the specified version of ruby
-ruby '2.5.1'
+ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
@@ -16,11 +16,8 @@ group :production do
 end
 
 #Using strip as payment processor
-gem 'stripe' ,:git => 'https://github.com/stripe/stripe-ruby'
+gem 'stripe' 
 #,:git => 'https://github.com/stripe/stripe-ruby'
-
-#add bootstrap
-gem 'bootstrap-sass'
 
 #The 12 factors for Heroku
 gem 'rails_12factor', group: :production
@@ -52,6 +49,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootstrap-sass'
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
